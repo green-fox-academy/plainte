@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="averageofinput" targetName="averageofinput" />
+      <config projectName="oddeven" targetName="oddeven" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7008dd0-1640-4f66-8a7f-e8e0c5100d55" name="Default Changelist" comment="" />
+    <list default="true" id="22350f6d-78cd-4c39-b508-9311c61edd85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../averageofinput/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../averageofinput/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -60,8 +62,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -82,7 +84,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="averageofinput" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="averageofinput" TARGET_NAME="averageofinput" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="averageofinput" RUN_TARGET_NAME="averageofinput">
+    <configuration name="oddeven" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="oddeven" TARGET_NAME="oddeven" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="oddeven" RUN_TARGET_NAME="oddeven">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -93,31 +95,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e7008dd0-1640-4f66-8a7f-e8e0c5100d55" name="Default Changelist" comment="" />
-      <created>1547654900727</created>
+      <changelist id="22350f6d-78cd-4c39-b508-9311c61edd85" name="Default Changelist" comment="" />
+      <created>1547656423506</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547654900727</updated>
-      <workItem from="1547654902166" duration="1514000" />
+      <updated>1547656423506</updated>
+      <workItem from="1547656424660" duration="518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1514000" />
+    <option name="totallyTimeSpent" value="518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="20" width="1400" height="830" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Messages" weight="0.32998565" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998565" />
@@ -140,8 +141,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
