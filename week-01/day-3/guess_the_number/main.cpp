@@ -22,6 +22,5 @@ int main(int argc, char* args[]) {
             std::cout << "You found the number: 8" << std::endl;
         }
     }
-
     return 0;
 }
