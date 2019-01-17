@@ -2,8 +2,8 @@
 #include <string>
 
 int factorio(int y, int s){
-    int factorial;
-    for(int i = 0; i <= y; i++){
+    int factorial = 1;
+    for(int i = 1; i <= y; i++){
          factorial *= i;
     }
     factorial = s;
