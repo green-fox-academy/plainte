@@ -17,12 +17,11 @@ int main(int argc, char* args[]) {
     int a;
     std::cout << "Enter the size of the array!" << std::endl;
     std::cin >> a;
-    int b = a;
     int i, j;
-    int array[a][b];
+    int array[a][a];
 
     for(i = 0; i < a; i++){
-        for(j = 0; j < b; j++){
+        for(j = 0; j < a; j++){
             if (i == j) {
                 array[i][j] = 1;
             } else{
@@ -32,7 +31,7 @@ int main(int argc, char* args[]) {
     }
     std::cout << std::endl;
     for(i = 0; i < a; i++){
-        for(j = 0; j < b; j++){
+        for(j = 0; j < a; j++){
         std::cout << array[i][j] << " ";
         }
         std::cout << std::endl;

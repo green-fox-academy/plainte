@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="diagonal_matrix" targetName="diagonal_matrix" />
+      <config projectName="double_items" targetName="double_items" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,9 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8a6ada0-af83-4fc3-943e-9fb7c6c96aae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    <list default="true" id="48ddcb9a-c5a7-4ef5-8f61-2e7410006da2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../diagonal-matrix/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonal-matrix/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonal-matrix/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonal-matrix/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="32" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -88,7 +85,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="diagonal_matrix" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="diagonal_matrix" TARGET_NAME="diagonal_matrix" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="diagonal_matrix" RUN_TARGET_NAME="diagonal_matrix">
+    <configuration name="double_items" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="double_items" TARGET_NAME="double_items" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="double_items" RUN_TARGET_NAME="double_items">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -99,17 +96,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8a6ada0-af83-4fc3-943e-9fb7c6c96aae" name="Default Changelist" comment="" />
-      <created>1547737507036</created>
+      <changelist id="48ddcb9a-c5a7-4ef5-8f61-2e7410006da2" name="Default Changelist" comment="" />
+      <created>1547740335876</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547737507036</updated>
-      <workItem from="1547737508436" duration="3304000" />
+      <updated>1547740335876</updated>
+      <workItem from="1547740337508" duration="488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3304000" />
+    <option name="totallyTimeSpent" value="488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="20" width="1400" height="830" extended-state="0" />
@@ -146,11 +143,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
