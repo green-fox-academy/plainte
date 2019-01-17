@@ -14,9 +14,10 @@ int main(int argc, char* args[]) {
     //   0 0 0 1
     //
     // - Print this two dimensional array to the output
-    int a, b;
-    std::cout << "Enter the sizes of array!" << std::endl;
-    std::cin >> a >> b;
+    int a;
+    std::cout << "Enter the size of the array!" << std::endl;
+    std::cin >> a;
+    int b = a;
     int i, j;
     int array[a][b];
 
