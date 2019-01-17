@@ -22,8 +22,6 @@ int main(int argc, char* args[]) {
     std::cout << "Give me a new number!" << std::endl;
     std::cin >> b;
 
-    factorio(a, b);
-
     std::cout << "The number is: " << factorio(a, b) << std::endl;
 
     return 0;

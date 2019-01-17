@@ -16,8 +16,6 @@ int main(int argc, char* args[]) {
     std::cout << "Give me a number" << std::endl;
     std::cin >> y;
 
-    sum(y);
-
     std::cout << "The sum of these numbers is " << sum(y) << std::endl;
 
 

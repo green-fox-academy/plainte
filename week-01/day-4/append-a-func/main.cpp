@@ -15,8 +15,6 @@ int main(int argc, char* args[]) {
     // - Print the result of `appendAFunc(typo)`
     std::string typo = "Chinchill";
 
-    appendAFunc(typo);
-
     std::cout << appendAFunc(typo) << std::endl;
 
     return 0;
