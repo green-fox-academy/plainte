@@ -15,7 +15,7 @@ int main(int argc, char* args[]) {
     std::cout << "My name is " << myname << std::endl;
     std::cout << "My age is " << myage << std::endl;
     std::cout << "My height in double is " << myheight << std::endl;
-    std::cout << "Marital status (0-false, 1-true) " << married << std::endl;
+    std::cout << "Marital status (0-not married, 1-married) " << married << std::endl;
 
 
     return 0;

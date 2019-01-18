@@ -8,7 +8,7 @@ int main(int argc, char* args[]) {
     // - Double all the values in the array
     int numList[] = {3, 4, 5, 6, 7};
     int a = sizeof(numList) / sizeof(numList[0]);
-    for(int i = 0; i < a; i++){
+    for (int i = 0; i < a; i++) {
         numList[i] *= 2;
         //std::cout << numList[i] << std::endl;
     }

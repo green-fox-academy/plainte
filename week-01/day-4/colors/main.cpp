@@ -20,7 +20,5 @@ int main(int argc, char* args[]) {
     //example cout
     std::cout << colors[1][0] << std::endl;
 
-
-
     return 0;
 }

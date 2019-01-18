@@ -12,14 +12,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a832d0dd-c828-4e19-b872-31a1b073b233" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../day-3/BMI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/BMI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/animalsandlegs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/animalsandlegs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/averageofinput/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/averageofinput/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/averageofinput/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/averageofinput/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/codinghours/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/codinghours/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/conditional_variable_mutation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/conditional_variable_mutation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/conditional_variable_mutation/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/conditional_variable_mutation/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/count-from-to/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/count-from-to/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/count-from-to/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/count-from-to/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/cuboid/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/cuboid/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/define-basic-info/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/define-basic-info/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/define-basic-info/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/define-basic-info/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/draw-diamond/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/draw-diamond/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/draw-diamond/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/draw-diamond/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/draw-pyramid/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/draw-pyramid/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/draw-pyramid/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/draw-pyramid/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/draw-triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/draw-triangle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/draw-triangle/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/draw-triangle/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/fav_number/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/fav_number/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/fizz_buzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/fizz_buzz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/fizz_buzz/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/fizz_buzz/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/guess_the_number/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/guess_the_number/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/guess_the_number/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/guess_the_number/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/hello_user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/hello_user/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/hellome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/hellome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/helloothers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/helloothers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/humptydumpty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/humptydumpty/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/introduceyourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/introduceyourself/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/iwontcheatonexams/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/iwontcheatonexams/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/iwontcheatonexams/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/iwontcheatonexams/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/miletokm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/miletokm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/multiplication_table/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/multiplication_table/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/multiplication_table/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/multiplication_table/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/oddeven/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/oddeven/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/onetwoalot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/onetwoalot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/onetwoalot/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/onetwoalot/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/parametric-average/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/parametric-average/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/parametric-average/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/parametric-average/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/party-indicator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/party-indicator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/party-indicator/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/party-indicator/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/print-bigger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/print-bigger/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/print-bigger/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/print-bigger/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/print-even/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/print-even/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/print-even/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/print-even/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/secondinaday/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/secondinaday/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/secondinaday/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/secondinaday/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/swap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/swap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/two_numbers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/two_numbers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/variablemutation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/variablemutation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-3/variablemutation/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-3/variablemutation/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../append-a-func/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../append-a-func/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../append-a-func/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../append-a-func/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../append-a/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../append-a/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../change-element/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../change-element/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../colors/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../colors/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compare-length/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../compare-length/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compare-length/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../compare-length/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonal-matrix/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonal-matrix/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonal-matrix/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonal-matrix/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../double-items/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../double-items/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../double-items/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../double-items/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../doubling/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../doubling/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doubling/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../doubling/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../factorio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../factorio/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../factorio/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../factorio/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../greet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../greet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../greet/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../greet/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../increment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../increment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../printelements/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../printelements/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../printelements/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../printelements/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reverse-list/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../reverse-list/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../third/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../third/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="255">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -109,17 +172,18 @@
       <updated>1547725406197</updated>
       <workItem from="1547725407821" duration="2981000" />
       <workItem from="1547736879956" duration="39000" />
+      <workItem from="1547805280640" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3020000" />
+    <option name="totallyTimeSpent" value="3032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="20" width="1400" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -150,8 +214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="255">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>

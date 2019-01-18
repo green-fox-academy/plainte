@@ -6,7 +6,7 @@ int main(int argc, char* args[]) {
     int a, b;
     std::cout << "Give me two numbers" << std::endl;
     std::cin >> a >> b;
-    if(a > b){
+    if (a > b) {
         std::cout << "The bigger number is: " << a << std::endl;
     } else {
         std::cout << "The bigger number is: " << b << std::endl;

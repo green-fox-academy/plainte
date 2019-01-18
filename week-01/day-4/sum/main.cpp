@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-int sum(int a){
+int sum(int a)  {
     int b = 0;
-    for(int i = 0; i <= a; i++){
+    for (int i = 0; i <= a; i++) {
         b += i;
     }
     return b;

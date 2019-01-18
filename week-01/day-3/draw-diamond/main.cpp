@@ -20,7 +20,7 @@ int main(int argc, char* args[]) {
     std::cin >> n;
     space = n - 1;
 
-    for(i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++) {
         for (y = 1; y <= space; y++) {
             std::cout << " ";
         }
@@ -31,12 +31,12 @@ int main(int argc, char* args[]) {
         std::cout << "\n";
     }
     space = 1;
-    for(i = 1; i <= n; i++){
-        for(y = 1; y <= space; y++){
+    for (i = 1; i <= n; i++) {
+        for (y = 1; y <= space; y++) {
             std::cout << " ";
         }
         space++;
-        for(y = 1; y <= 2 * (n - i) - 1; y++){
+        for (y = 1; y <= 2 * (n - i) - 1; y++) {
             std::cout << "*";
         }
         std::cout << "\n";

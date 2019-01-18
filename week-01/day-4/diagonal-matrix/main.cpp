@@ -20,18 +20,18 @@ int main(int argc, char* args[]) {
     int i, j;
     int array[a][a];
 
-    for(i = 0; i < a; i++){
-        for(j = 0; j < a; j++){
+    for (i = 0; i < a; i++) {
+        for (j = 0; j < a; j++) {
             if (i == j) {
                 array[i][j] = 1;
-            } else{
+            } else {
                 array[i][j] = 0;
             }
         }
     }
     std::cout << std::endl;
-    for(i = 0; i < a; i++){
-        for(j = 0; j < a; j++){
+    for (i = 0; i < a; i++) {
+        for(j = 0; j < a; j++) {
         std::cout << array[i][j] << " ";
         }
         std::cout << std::endl;

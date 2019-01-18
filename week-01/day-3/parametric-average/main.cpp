@@ -10,10 +10,10 @@ int main(int argc, char* args[]) {
     // Sum: 22, Average: 4.4
     int num;
     int a;
-    double sum;
+    double sum = 0;
     std::cout << "Give me a number!" << std::endl;
     std::cin >> num;
-    for(int i = 0; i < num; i++){
+    for (int i = 0; i < num; i++) {
         std::cout << "Please give an integer!" << std::endl;
         std::cin >> a;
         sum += a;

@@ -33,28 +33,33 @@ int main(int argc, char* args[]) {
     // tell if f1 is bigger than f2 (print as a boolean)
 
     bool asd = false;
-    if (f1 < f2)
-    std::cout << asd << std::endl;
+    if (f1 < f2) {
+        std::cout << asd << std::endl;
+    }
 
     int g1 = 350;
     int g2 = 200;
     // tell if the double of g2 is bigger than g1 (print as a boolean)
     bool sad = true;
-    if ((g2 * 2) > g1)
-    std::cout << sad << std::endl;
+    if ((g2 * 2) > g1) {
+        std::cout << sad << std::endl;
+    }
 
     int h = 135798745;
     // tell if it has 11 as a divisor (print as a boolean)
-    if (h / 11 > 0)
-    std::cout << asd << std::endl;
+    if (h / 11 > 0) {
+        std::cout << asd << std::endl;
+    }
 
     int i1 = 10;
     int i2 = 3;
     // tell if i1 is higher than i2 squared and smaller than i2 cubed (print as a boolean)
-    if (i1 > (i2 * 2))
+    if (i1 > (i2 * 2)) {
         std::cout << asd << std::endl;
-    if ((i2 * i2 * i2) > i1)
+    }
+    if ((i2 * i2 * i2) > i1) {
         std::cout << sad << std::endl;
+    }
 
     int j = 1521;
     // tell if j is dividable by 3 or 5 (print as a boolean)

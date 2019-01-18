@@ -11,7 +11,7 @@ int main(int argc, char* args[]) {
     int n;
     std::cout << "How many integers you want?" << std::endl;
     std::cin >> n;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         std::cout << "Give me a new integer!" << std::endl;
         std::cin >> a;
         sum += a;

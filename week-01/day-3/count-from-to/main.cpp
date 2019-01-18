@@ -18,19 +18,17 @@ int main(int argc, char* args[]) {
     int a, b;
     std::cout << "Please give me two numbers!" << std::endl;
     std::cin >> a >> b;
-    if(b < a){
+    if (b < a) {
         std::cout << "The second number should be bigger" << std::endl;
         std::cout << "Please give new numbers!" << std::endl;
         std::cin >> a >> b;
-    } if( b < a) {
+    } if ( b < a) {
         std::cout << "Play with something else!" << std::endl;
-    } else{
-        while(a < b){
+    } else {
+        while (a < b) {
             std::cout << a << std::endl;
             a++;
         }
-
     }
-
     return 0;
 }

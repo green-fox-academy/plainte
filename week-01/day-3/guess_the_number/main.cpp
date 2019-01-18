@@ -10,8 +10,8 @@ int main(int argc, char* args[]) {
     // The stried number is lower
     // You found the number: 8
     int num = 8;
-    int a;
-    while(a != num) {
+    int a = 0;
+    while (a != num) {
         std::cout << "Guess the number!" << std::endl;
         std::cin >> a;
         if (a < num) {

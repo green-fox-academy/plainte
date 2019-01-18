@@ -20,13 +20,13 @@ int main(int argc, char* args[]) {
     std::cout << "Please, give me the numbers of girls and boys!" << std::endl;
     std::cin >> a >> b;
     int sum = a + b;
-    if ((a == b) && sum >= 20 ){
+    if ((a == b) && sum >= 20 ) {
         std::cout << "The party is excellent!" << std::endl;
-    } else if (sum >= 20 && a != b && a >= 1){
+    } else if (sum >= 20 && a != b && a >= 1) {
         std::cout << "Quite cool party!" << std::endl;
-    } else if (sum < 20 && a >=1){
+    } else if (sum < 20 && a >=1) {
         std::cout << "Average party..." << std::endl;
-    } else if (a == 0){
+    } else if (a == 0) {
         std::cout << "Sausage party" << std::endl;
     }
     return 0;

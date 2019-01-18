@@ -9,7 +9,7 @@ int main(int argc, char* args[]) {
     int numbers[] = {4, 5, 6, 7};
     int lengthOfArray = sizeof(numbers) / sizeof(numbers[0]);
 
-    for(int i = 0; i < lengthOfArray; i++){
+    for (int i = 0; i < lengthOfArray; i++) {
         std::cout << numbers[i] << std::endl;
     }
 

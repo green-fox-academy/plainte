@@ -11,16 +11,16 @@ int main(int argc, char* args[]) {
     std::cout << "Give me a number!" << std::endl;
     std::cin >> num;
 
-    if (num <= 0){
+    if (num <= 0) {
         std::cout << "Not enough" << std::endl;
     }
-    if (num == 1){
+    if (num == 1) {
         std::cout << "One" << std::endl;
     }
-    if (num == 2){
+    if (num == 2) {
         std::cout << "Two" << std::endl;
     }
-    if (num >= 3){
+    if (num >= 3) {
         std::cout << "A lot" << std::endl;
     }
 

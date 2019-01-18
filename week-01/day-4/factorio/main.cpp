@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-int factorio(int y, int s){
+int factorio(int y, int s) {
     int factorial = 1;
-    for(int i = 1; i <= y; i++){
+    for (int i = 1; i <= y; i++) {
          factorial *= i;
     }
     factorial = s;

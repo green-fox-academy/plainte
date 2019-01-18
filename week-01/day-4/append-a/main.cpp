@@ -8,14 +8,11 @@ int main(int argc, char* args[]) {
     // - Add all elements an `"a"` at the end
     std::string animals[3] = {"koal", "pand", "zebr"};
     std::string a = "a";
-    for(int i = 0; i < 3; i++){
+    int i = 0;
+    while (i < 3) {
         animals[i] += a;
+        //std::cout << animals[i] << std::endl;
+        i++;
     }
-    /*
-    for(int i = 0; i < 3; i++){
-        std::cout << animals[i] << std::endl;
-    }
-     */
-
     return 0;
 }

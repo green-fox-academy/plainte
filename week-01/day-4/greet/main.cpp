@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void greet(std::string& a){
+void greet(std::string& a) {
     std::cout << "Greetings dear, " << a << std::endl;
 }
 int main(int argc, char* args[]) {

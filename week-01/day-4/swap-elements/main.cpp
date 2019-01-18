@@ -12,7 +12,7 @@ int main(int argc, char* args[]) {
     abc[0] = abc[2];
     abc[2] = swap;
     int i = 0;
-    while(i < 3){
+    while (i < 3) {
         std::cout << abc[i] << std::endl;
         i++;
     }

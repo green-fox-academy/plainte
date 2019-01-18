@@ -12,7 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22473a96-562e-4930-b557-9c85e8fc34a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../print-bigger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../print-bigger/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BMI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BMI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../animalsandlegs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../animalsandlegs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../averageofinput/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../averageofinput/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../averageofinput/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../averageofinput/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codinghours/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../codinghours/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conditional_variable_mutation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../conditional_variable_mutation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conditional_variable_mutation/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../conditional_variable_mutation/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-4/reverse-list/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-4/reverse-list/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +31,17 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -47,7 +65,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="count_from_to" type="b2602c69:ProjectViewProjectNode" />
+              <item name="count-from-to" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -87,24 +115,20 @@
       <option name="presentableId" value="Default" />
       <updated>1547668183252</updated>
       <workItem from="1547668184412" duration="888000" />
+      <workItem from="1547803527465" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="888000" />
+    <option name="totallyTimeSpent" value="925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="20" width="1400" height="830" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.32998565" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998565" />
@@ -112,10 +136,16 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32998565" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,15 +155,15 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../animalsandlegs/main.cpp">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

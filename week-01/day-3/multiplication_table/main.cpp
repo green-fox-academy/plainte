@@ -20,7 +20,7 @@ int main(int argc, char* args[]) {
     int n;
     std::cout << "Give me a number for multiplication" << std::endl;
     std::cin >> n;
-    for(int i = 1; i < 11; i++){
+    for (int i = 1; i < 11; i++) {
         int sum;
         sum = i * n;
         std::cout << i << " * " << n << " = " << sum << std::endl;

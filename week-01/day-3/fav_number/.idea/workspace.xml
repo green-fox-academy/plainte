@@ -12,8 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dece32c4-be73-4db9-8918-b4d74cda7e48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../BMI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BMI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../animalsandlegs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../animalsandlegs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../print-bigger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../print-bigger/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../averageofinput/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../averageofinput/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../averageofinput/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../averageofinput/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codinghours/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../codinghours/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conditional_variable_mutation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../conditional_variable_mutation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conditional_variable_mutation/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../conditional_variable_mutation/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../count-from-to/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../count-from-to/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../count-from-to/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../count-from-to/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cuboid/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cuboid/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../define-basic-info/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../define-basic-info/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../define-basic-info/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../define-basic-info/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draw-diamond/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../draw-diamond/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draw-diamond/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../draw-diamond/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draw-pyramid/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../draw-pyramid/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draw-pyramid/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../draw-pyramid/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draw-triangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../draw-triangle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draw-triangle/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../draw-triangle/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-4/reverse-list/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-4/reverse-list/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,8 +80,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -103,16 +120,17 @@
       <updated>1547650065844</updated>
       <workItem from="1547650067012" duration="69000" />
       <workItem from="1547669127143" duration="33000" />
+      <workItem from="1547804198507" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102000" />
+    <option name="totallyTimeSpent" value="110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="20" width="1400" height="830" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

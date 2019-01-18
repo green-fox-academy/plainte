@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void doubling(int& a){
+void doubling(int& a) {
     a *= 2;
 }
 

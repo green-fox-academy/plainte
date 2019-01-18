@@ -4,7 +4,7 @@
     bool isAGreaterThanB(int y[], int s[]){
     int a = sizeof(y) / sizeof(y[0]);
     int b = sizeof(s) / sizeof(s[0]);
-    if(a > b){
+    if (a > b) {
         return true;
     }
 } */
@@ -22,18 +22,18 @@ int main(int argc, char* args[]) {
 
     a = sizeof(p1) / sizeof(p1[0]);
     b = sizeof(p2) / sizeof(p2[0]);
-    if(b > a){
+    if (b > a) {
         std::cout << "p2 has more elements than p1" << std::endl;
-    } else{
+    } else {
         std::cout << "p2 has less elements than p1" << std::endl;
     }
 
     /* experimental project with bool
-    if(isAGreaterThanB(p1, p2)){
+    if (isAGreaterThanB(p1, p2)) {
         std::cout << "p2 has more elements than p1" << std::endl;
-    } else{
+    } else {
         std::cout << "p2 has less elements than p1" << std::endl;
     return 0;
-     */
+    */
     return 0;
 }

@@ -9,7 +9,7 @@ int main(int argc, char* args[]) {
     int ai[] = {3, 4, 5, 6, 7};
     int b = sizeof(ai) / sizeof(ai[0]);
     int sum = 0;
-    for(int i = 0; i < b; i++){
+    for (int i = 0; i < b; i++) {
         sum += ai[i];
     }
     std::cout << "The sum of the elements: " << sum << std::endl;
