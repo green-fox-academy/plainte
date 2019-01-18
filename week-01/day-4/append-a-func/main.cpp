@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string appendAFunc(std::string a){
+std::string appendAFunc(std::string a) {
     std::string b = "a";
     a += b;
     return a;
