@@ -14,7 +14,7 @@ int main(int argc, char* args[]) {
     int n;
     std::cout << "How many lines you want?" << std::endl;
     std::cin >> n;
-    for (int i = 0; i < n + 1; i++) {
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < i; j++) {
             std::cout << "*";
         }
