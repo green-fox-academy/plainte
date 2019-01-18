@@ -17,22 +17,28 @@ int main(int argc, char* args[]) {
     // The diamond should have as many lines as the number was
     int n;
     std::cout << "How many lines you want?" << std::endl;
+    // only works with 7
     std::cin >> n;
-    for (int i = 0; i < n / 2 + 1; i++) {
-        for (int j = i; j < n; j++) {
+    for (int i = 0; i < (n + 1) / 2; i++) {
+        for (int j = 0; j < (n + 1) / 2 - i - 1; j++) {
             std::cout << " ";
         }
-        for (int j = 0; j <= (2 * i); j++) {
+        for (int j = 0; j < 2 * i + 1; j++) {
             std::cout << "*";
         }
-        std::cout << "\n";
+        std::cout << std::endl;
     }
-    for (int i = n / 2 + 1; i < n; i++) {
-        for (int j = 0; j <= i; j++) {
-            std::cout << "%";
+    if (n % 2 == 0) {
+        n -= 1;
+    }
+    for (int i = (n - 1) / 2 - 1; i >= 0; i--) {
+        for (int j = 0; j <= n / 2 - i - 1; j++) {
+            std::cout << " ";
         }
-        std::cout << "\n";
+        for (int j = 0 ; j < 2 * i + 1; j++) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
     }
-
     return 0;
 }
