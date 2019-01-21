@@ -5,10 +5,8 @@
 
 int main(int argc, char* args[])
 {
-    std::string out = "Never gonna give you up, Never gonna let you down\nNever gonna run around and desert you"
-                      "\nNever gonna make you cry, Never gonna say goodbye\nNever gonna tell a lie and hurt you \n";
+    std::string out = "";
     std::vector<int> notSoCrypticMessage = {1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11};
-
     std::map<int, std::string> map;
 
     map[7] = "run around and desert you";
@@ -24,7 +22,12 @@ int main(int argc, char* args[])
     // Your job is to decode the notSoCrypticMessage by using the map as a look up table
     // Assemble the fragments into the out variable
 
+    for (int i = 0; i < notSoCrypticMessage.size(); i++) {
+        out.append(map[notSoCrypticMessage[i]]);
+    }
+
     std::cout << out << std::endl;
+
 
     return 0;
 }
