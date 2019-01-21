@@ -9,10 +9,10 @@ std::string containsSeven(const std::vector<int>& numbers) {
     int key = 7;
     findResult = std::find(array.begin(), array.end(), key);
 
-    if (findResult == array.end()) {
-        ok = "Noooooo";
-    } else {
+    if (findResult != array.end()) {
         ok = "Hoorray";
+    } else {
+        ok = "Noooooo";
     }
     return ok;
 }
