@@ -9,9 +9,9 @@ int main ()
     double b = 432.2;
     std::string name = "Bob";
 
-    int* p_a = nullptr;
-    double* p_b = nullptr;
-    std::string* p_name = nullptr;
+    int *p_a = nullptr;
+    double *p_b = nullptr;
+    std::string *p_name = nullptr;
 
     p_a = &a;
     p_b = &b;
