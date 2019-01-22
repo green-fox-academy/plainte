@@ -1,23 +1,28 @@
 #include <iostream>
 
-void printBiggestNumber(int * array, int array_size) {
-    int num = 0;
+int biggestNumber(int const * array, int array_size) {
+    int x_num = 0;
     for (int i = 0; i < array_size; i++) {
-        if (array[i] > num) {
-            num = array[i];
+        if (array[i] > x_num) {
+            x_num = array[i];
         }
     }
-    std::cout << num;
+    return x_num;
 }
 
-int readPreferences(int *p_num) {
+void print(int x_num) {
+    std::cout << x_num;
+}
+
+int readPreferences() {
+    int p_num = 0;
     std::cout << "How many integers you want in your array?" << std::endl;
-    std::cin >> *p_num;
+    std::cin >> p_num;
 
-    return *p_num;
+    return p_num;
 }
 
-void readArray(int* array, int num) {
+void readArray(int  * array, int num) {
     for (int i = 0; i < num; i++) {
         std::cout << "Please give an integer!" << std::endl;
         std::cin >> array[i];
@@ -27,14 +32,12 @@ void readArray(int* array, int num) {
 
 int main()
 {
-    // Create a program which first asks for a number
-    // this number indicates how many integers we want to store in an array
-    // and than asks for numbers till the user fills the array
-    // It should print out the biggest number in the given array and the memory address of it
-    int num = 0;
-    int *p_num = &num;
+    // Refactor time!
+    // use your 'refactor_maximum.cpp', solve the same exercise by creating a separate function
+    // for each functionality
 
-    readPreferences(p_num);
+
+    int num = readPreferences();
 
     int array[num];
 
@@ -43,7 +46,10 @@ int main()
     int array_size = sizeof(array) / sizeof(array[0]);
     int *arrayPtr = array;
 
-    printBiggestNumber(arrayPtr, array_size);
+    int x_num = biggestNumber(arrayPtr, array_size);
+    print(x_num);
+
+
 
     return 0;
 }
