@@ -27,6 +27,6 @@ int main()
     int *arrayPtr = array;
 
     printBiggestNumber(arrayPtr, array_size);
-    
+
     return 0;
 }
