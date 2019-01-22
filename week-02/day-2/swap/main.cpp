@@ -3,7 +3,7 @@
 void swap(int *p_a, int *p_b) {
     int temp = 0;
     temp = *p_a;
-    *p_a = *p_b;    
+    *p_a = *p_b;
     *p_b = temp;
 }
 
