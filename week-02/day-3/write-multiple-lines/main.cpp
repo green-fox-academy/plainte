@@ -9,12 +9,22 @@
 // The number parameter should describe how many lines the file should have.
 // So if the word is "apple" and the number is 5, than it should write 5 lines
 // to the file and each line should be "apple"
-void writeInFile(std::string& path, )
+void writeInFile(std::string& path, std::string& apple, int& lines) {
+    std::ofstream appleFile(path);
+    int i = 0;
+    while (i < lines) {
+        appleFile << apple << std::endl;
+        i++;
+    }
+    appleFile.close();
+}
+
 int main() {
-    std::string path = "apple.txt";
+    std::string path = "./apple.txt";
     std::string apple = "apple";
     int lines = 5;
 
+    writeInFile(path, apple, lines);
 
     return 0;
 }
