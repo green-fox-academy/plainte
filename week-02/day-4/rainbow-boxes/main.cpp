@@ -32,7 +32,7 @@ void draw()
     int color[3];
     int *p_color = color;
     for (int i = 0; i < 7; i++){
-        size = i * 40;
+        size = i * 30;
         if (i == 0) {
             color[0] = 255;
             color[1] = 0;
