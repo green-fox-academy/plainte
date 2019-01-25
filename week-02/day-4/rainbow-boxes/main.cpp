@@ -19,6 +19,7 @@ SDL_Window* gWindow = nullptr;
 
 //The window renderer
 SDL_Renderer* gRenderer = nullptr;
+
 void createRainbowSquare(int& x, int * y){
     SDL_SetRenderDrawColor(gRenderer, y[0], y[1], y[2], 255);
     //create a rectangle
@@ -26,6 +27,7 @@ void createRainbowSquare(int& x, int * y){
     //draw rectangle
     SDL_RenderFillRect( gRenderer, &fillRect );
 }
+
 void draw()
 {
     int size;
