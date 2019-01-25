@@ -3,8 +3,8 @@
 
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 720;
-const int SCREEN_HEIGHT = 720;
+const int SCREEN_WIDTH = 480;
+const int SCREEN_HEIGHT = 480;
 
 //Draws geometry on the canvas
 void draw();
@@ -22,20 +22,19 @@ SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
 
 void createLines(int& x, int& y){
-    //purple lines
-    SDL_SetRenderDrawColor(gRenderer, 128, 0, 128, 255);
-    SDL_RenderDrawLine(gRenderer, x, 0, SCREEN_WIDTH,y);
-    //green lines
-    SDL_SetRenderDrawColor(gRenderer, 0, 255, 0, 255);
-    SDL_RenderDrawLine(gRenderer, 0, x, y,SCREEN_HEIGHT);
-
+                    //purple lines
+                    SDL_SetRenderDrawColor(gRenderer, 128, 0, 128, 255);
+                    SDL_RenderDrawLine(gRenderer, x, 0, SCREEN_WIDTH, y);
+                    //green lines
+                    SDL_SetRenderDrawColor(gRenderer, 0, 255, 0, 255);
+                    SDL_RenderDrawLine(gRenderer, 0, x, y, SCREEN_HEIGHT);
 }
 void draw() {
     int w;
     int h;
-    for (int i = 0; i < 72; i ++) {
-        w = 0 + (i * 20);
-        h = (i + 1) * 20;
+    for (int i = 0; i < 72; i++) {
+        w = 0 + (i * 10);
+        h = (i + 1) * 10;
         createLines(w, h);
     }
 }

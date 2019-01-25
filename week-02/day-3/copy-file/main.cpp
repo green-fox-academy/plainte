@@ -6,7 +6,7 @@
 // It should take the filenames as parameters
 // It should return a boolean that shows if the copy was successful
 bool copy(const std::string& original,const std::string& copied) {
-    bool status = true;
+    bool status = false;
 
     std::ifstream copyThis(original);
     std::ofstream copyIntoThis(copied);
@@ -25,9 +25,7 @@ bool copy(const std::string& original,const std::string& copied) {
 
     for (unsigned int j = 0; j < temp.size(); j++) {
         if (temp2[j] == temp[j]) {
-            if (j == temp.size()) {
-                status = false;
-            }
+            status = true;
         }
     }
     return status;
