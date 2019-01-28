@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int main(int argc, char* args[]) {
     std::string tree01 = "arborvitae, ash grey, two, female";
