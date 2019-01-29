@@ -1,4 +1,4 @@
-#include "cmake-build-debug/PostIt.h"
+#include "PostIt.h"
 #include <iostream>
 
 int main(int argc, char * args[]) {
