@@ -6,5 +6,7 @@ int main(int argc, char * args[]) {
     PostIt PostIt2("pink", "Awesome", "black");
     PostIt PostIt3("yellow", "Superb!", "green");
 
+    std::cout << PostIt1.text << std::endl;
+
     return 0;
 }
