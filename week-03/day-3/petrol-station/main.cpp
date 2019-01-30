@@ -3,11 +3,11 @@
 #include "station.h"
 
 int main(int argc, char * argv[]) {
-    Car car1(50, 70);
-    Car car2(20, 90);
-    Car car3(0, 45);
-    Car car4(70, 80);
-    Car car5(50, 55);
+    Car car1(120, 200);
+    Car car2(20, 300);
+    Car car3(0, 450);
+    Car car4(70, 220);
+    Car car5(210, 300);
 
     Station station;
 

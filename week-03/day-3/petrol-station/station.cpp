@@ -5,14 +5,19 @@
 
 Station::Station()
 {
-    gasAmount = 10000;
+    gasAmount = 1000;
 }
 
 void Station::fill(Car& car) {
     while (!car.isFull()) {
-        car.gasAmount++;
-        gasAmount--;
-        std::cout << "Filling car!" << std::endl;
+        if (gasAmount == 0) {
+            std::cout << "Sorry, the Station is out of gas!" << std::endl;
+            exit(EXIT_SUCCESS);
+        } else {
+            car.gasAmount++;
+            gasAmount--;
+            std::cout << "Filling car!" << std::endl;
+        }
     }
     std::cout << gasAmount << std::endl;
 }
