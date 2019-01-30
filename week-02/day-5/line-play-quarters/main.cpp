@@ -1,10 +1,9 @@
 #include <iostream>
 #include <SDL.h>
 
-
 //Screen dimension constants
-const int SCREEN_WIDTH = 480;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 640;
 
 //Draws geometry on the canvas
 void draw();
@@ -21,21 +20,30 @@ SDL_Window* gWindow = nullptr;
 //The window renderer
 SDL_Renderer* gRenderer = nullptr;
 
-void createLines(int& x, int& y){
-                    //purple lines
-                    SDL_SetRenderDrawColor(gRenderer, 128, 0, 128, 255);
-                    SDL_RenderDrawLine(gRenderer, x, 0, SCREEN_WIDTH, y);
-                    //green lines
-                    SDL_SetRenderDrawColor(gRenderer, 0, 255, 0, 255);
-                    SDL_RenderDrawLine(gRenderer, 0, x, y, SCREEN_HEIGHT);
+void fun (int& x, int& y, int& lines, int& num) {
+
+    int k = SCREEN_WIDTH/num;
+    int p = SCREEN_HEIGHT/num;
+
+
+    SDL_SetRenderDrawColor(gRenderer, 66, 134, 244, 255);
+
+    SDL_RenderDrawLine(gRenderer, k * y - k, p * x - p + lines, k * y - k + lines, p * x);
+
+    SDL_SetRenderDrawColor(gRenderer, 244, 226, 66, 255);
+
+    SDL_RenderDrawLine(gRenderer, k * y- k + lines, p * x - p,k * y ,p * x - p+lines );
 }
-void draw() {
-    int w;
-    int h;
-    for (int i = 0; i < 72; i++) {
-        w = 0 + (i * 10);
-        h = (i + 1) * 10;
-        createLines(w, h);
+
+void draw()
+{
+    int num = 2;
+    for (int x = 0; x <= num; x++) {
+        for (int y = 0; y <= num; y++) {
+            for (int i = SCREEN_WIDTH/num/20; i < SCREEN_WIDTH/num; i+= SCREEN_WIDTH/num/40) {
+                fun (x, y, i, num);
+            }
+        }
     }
 }
 
@@ -49,7 +57,7 @@ bool init()
     }
 
     //Create window
-    gWindow = SDL_CreateWindow( "Rainbow box function", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+    gWindow = SDL_CreateWindow( "Line Play Quaters", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if( gWindow == nullptr )
     {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << std::endl;
