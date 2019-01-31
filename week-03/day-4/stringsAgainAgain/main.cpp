@@ -3,7 +3,7 @@
 // Given a string, compute recursively a new string where all the 'x' chars have been removed.
 
 std::string changeRecursively(std::string x, unsigned int length)
-{
+{   char k = '*';
     if (length == 0) {
         return x;
     } else if (x[length - 1] == 'x'){
