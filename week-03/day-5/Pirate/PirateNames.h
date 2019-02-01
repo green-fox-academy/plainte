@@ -1,0 +1,47 @@
+#ifndef PIRATE_PIRATENAMES_H
+#define PIRATE_PIRATENAMES_H
+#include <string>
+
+
+const std::string  pirateNames[] = {"Aylmer 'The Banished' Webb",
+                                 "Anscom 'The Shadow' Blankley",
+                                 "Atwood 'Honestly' Zulu",
+                                 "Quinton 'No-Tongue' Shirley",
+                                 "Rockwell 'Barnacle' Reks",
+                                 "Arledge 'Devil's Charm' Quway",
+                                 "Wyler 'Deceiver' Royston",
+                                 "Stanmore 'Cold Hearted' Asema",
+                                 "Darrow 'Deceit' Lee",
+                                 "Hayden 'Silver-Eye' Sweet",
+                                 "Norah 'Silver Hair' Hornsby",
+                                 "Sina 'Defiant' Richard",
+                                 "Mildred 'Femme Fatale' Puck",
+                                 "Elsa 'Pretender' Starbeeze",
+                                 "Edda 'Crow's Nest' Steele",
+                                 "Amie 'Buccaneer' Grendel",
+                                 "Ripley 'Marooner' Stanley",
+                                 "Parker 'Merry' Whiteley",
+                                 "Helena 'Hideous' Mabbott",
+                                 "Joy 'The Sour' Archer",
+                                 "Ellsworth 'Sly' Barrie",
+                                 "Orson 'Zigzag' Hamilton",
+                                 "Manton 'Sly' Clemons",
+                                 "Blaine 'Nightmare' Appleton",
+                                 "Manton 'Black Eyes' Ainsworth",
+                                 "Crowell 'Deceiver' Enigma",
+                                 "Olin 'Silver Tooth' Hale",
+                                 "Curtis 'Swindler' Lindsay",
+                                 "Patterson 'One-Eared' Snape",
+                                 "Mills 'No Smile' Bane",
+                                 "Isabell 'Scurvy' Lucifer",
+                                 "Clovis 'The Ghost' Demien",
+                                 "Icie 'Disfigured' Rave",
+                                 "Aileen 'Roaring' Crain",
+                                 "Onie 'Fraud' Harrison",
+                                 "Carmella 'The Journey' Swale",
+                                 "Cordie 'Blunder' Carmine",
+                                 "Leda 'Hex' Blade",
+                                 "Afton 'Daffy' Stanford",
+                                 "Belle 'Silver-Eye' Tristan"};
+
+#endif
