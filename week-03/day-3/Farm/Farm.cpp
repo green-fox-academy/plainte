@@ -39,7 +39,8 @@ int Farm::getAmountOfFreeSpaces()
     return _freeSpaces;
 }
 
-const std::vector<Animal> &Farm::getAnimalObject() const {
+std::vector<Animal> &Farm::getAnimalObject()
+{
     return animalObject;
 }
 

@@ -13,7 +13,7 @@ public:
     void slaughter();
     unsigned int getAmountOfAnimals();
     int getAmountOfFreeSpaces();
-    const std::vector<Animal> &getAnimalObject() const;
+    std::vector<Animal> &getAnimalObject();
 private:
     std::vector<Animal> animalObject;
     int _freeSpaces;
