@@ -99,3 +99,24 @@ std::string Pirate::hadParrot()
         return " He/she hasn't got a parrot!";
     }
 }
+
+std::string Pirate::CaptainStatus()
+{
+    if (isDead) {
+        return " he's dead!";
+    } else if (isPassedOut) {
+        return " passed out";
+    } else {
+        return " alive and awake!";
+    }
+}
+
+bool Pirate::getIsDead()
+{
+    return isDead;
+}
+
+bool Pirate::getIsPassedOut()
+{
+    return isPassedOut;
+}

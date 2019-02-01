@@ -18,6 +18,9 @@ public:
     void brawl(Pirate &otherPirate);
     std::string getPirateName();
     std::string hadParrot();
+    std::string CaptainStatus();
+    bool getIsDead();
+    bool getIsPassedOut();
 private:
     std::string pirateName;
     int drunkLevel;
@@ -25,7 +28,6 @@ private:
     bool isDead = false;
     bool gotParrot;
     std::string GetNameForPirates();
-
 };
 
 
