@@ -34,6 +34,7 @@ int main() {
         AnimalFarm1.breed();
     }
 
+
     std::cout << AnimalFarm1.getAmountOfAnimals() << std::endl;
 
     for (unsigned int i = 0; i < AnimalFarm1.getAnimalObject().size(); i++) {

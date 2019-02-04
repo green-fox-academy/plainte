@@ -12,6 +12,7 @@ void Farm::breed()
 {
     if (_freeSpaces > 0){
         animalObject.push_back(Animal());
+
     }
 }
 

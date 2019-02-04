@@ -46,8 +46,6 @@ int main(int argc, char * argv[])
     }
     std::cout << ship2.getAmountOfCrew() << std::endl;
 
-    // ship2.getCrew().at(2).die(); WTF IS THIS DELETES HALF OF THE CREW?!
-
     ship2.captain.die();
     std::cout << "The ship: " << ship2.getShipName() << " has  arrived, and it's captain called: " << ship2.getCaptainName() << std::endl;
     std::cout << "The captain consumed: " << ship2.captain.getDrunkLevel() << " beers, and now " << ship2.captain.CaptainStatus();
