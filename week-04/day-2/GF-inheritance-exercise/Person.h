@@ -1,5 +1,6 @@
 #ifndef GF_INHERITANCE_EXERCISE_PERSON_H
 #define GF_INHERITANCE_EXERCISE_PERSON_H
+
 #include <string>
 
 enum Gender
@@ -9,8 +10,6 @@ enum Gender
     OTHER
 };
 
-std::string getGender();
-
 class Person
 {
 public:
@@ -18,6 +17,7 @@ public:
     Person(std::string name, int age, Gender gender);
     virtual void introduce();
     virtual void getGoal();
+    std::string getGender();
 protected:
     std::string _name;
     int _age;

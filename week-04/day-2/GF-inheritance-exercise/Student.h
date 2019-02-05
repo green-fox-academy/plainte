@@ -1,5 +1,6 @@
 #ifndef GF_INHERITANCE_EXERCISE_STUDENT_H
 #define GF_INHERITANCE_EXERCISE_STUDENT_H
+
 #include "Person.h"
 
 class Student : public Person

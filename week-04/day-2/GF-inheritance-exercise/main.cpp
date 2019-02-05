@@ -2,6 +2,9 @@
 #include <vector>
 #include "Person.h"
 #include "Student.h"
+#include "Mentor.h"
+#include "Sponsor.h"
+#include "Cohort.h"
 
 int main(int argc, char * argv[])
 {
