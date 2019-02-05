@@ -1,30 +1,30 @@
 #include <iostream>
-#include "Flower.h"
+#include "Tree.h"
 
-Flower::Flower()
+Tree::Tree()
 {
-    _name = "Flower";
+    _name = "Tree";
 }
 
-Flower::Flower(Color color) :
+Tree::Tree(Color color) :
     Plant(color)
 {
-    _name = "Flower";
+    _name = "Tree";
 }
 
-bool Flower::ifNeedsWater()
+bool Tree::ifNeedsWater()
 {
-    return _waterAmount < 5;
+    return _waterAmount < 10;
 }
 
-void Flower::waterAbsorb(double increaseWaterByAmount)
+void Tree::waterAbsorb(double increaseWaterByAmount)
 {
     if (ifNeedsWater()) {
-        _waterAmount += increaseWaterByAmount * 0.75;
+        _waterAmount += increaseWaterByAmount * 0.4;
     }
 }
 
-void Flower::checkIfNeedsWater()
+void Tree::checkIfNeedsWater()
 {
     if (ifNeedsWater()) {
         std::cout << "The " << getColor() << " " << _name << " needs water" << std::endl;

@@ -1,29 +1,17 @@
 #ifndef THEGARDENAPPLICATION_FLOWER_H
 #define THEGARDENAPPLICATION_FLOWER_H
 
+#include "Plant.h"
 #include <string>
 
-enum Color
-{
-    YELLOW,
-    BLUE,
-    PURPLE,
-    ORANGE
-};
-
-class Flower
+class Flower : public Plant
 {
 public:
     Flower();
     Flower(Color color);
-    virtual bool needsWater();
-    std::string getColor();
-    virtual void waterAbsorb(int increaseWaterAmount);
-    virtual void checkIfNeedsWater();
-protected:
-    Color _color;
-    double _waterAmount;
-    bool _ifNeedsWater = false;
+    bool ifNeedsWater() override;
+    void waterAbsorb(double increaseWaterByAmount) override;
+    void checkIfNeedsWater() override;
 };
 
 
