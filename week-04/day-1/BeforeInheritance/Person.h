@@ -2,7 +2,7 @@
 #define BEFOREINHERITANCE_PERSON_H
 #include <string>
 
-enum class Gender
+enum  Gender
 {
     MALE,
     FEMALE

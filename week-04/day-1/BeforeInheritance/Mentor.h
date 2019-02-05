@@ -3,7 +3,7 @@
 #include <iostream>
 #include "Person.h"
 
-enum class Level
+enum Level
 {
     JUNIOR,
     INTERMEDIATE,
