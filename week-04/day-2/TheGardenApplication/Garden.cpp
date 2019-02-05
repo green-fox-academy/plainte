@@ -20,7 +20,7 @@ void Garden::fillGarden(Color color1, Color color2)
 void Garden::waterGarden(double waterBy)
 {
     std::cout << "Watering with " << waterBy << std::endl;
-    int totalPlants = _trees.size() + _flowers.size();
+    int totalPlants = ifTreesNeedWater();
 
     for (int j = 0; j < _flowers.size(); j++) {
         _flowers[j].waterAbsorb(waterBy / totalPlants);
@@ -38,4 +38,19 @@ void Garden::checkIfPlantsNeedWater()
     for (int i = 0; i < _trees.size(); i++) {
         _trees[i].checkIfNeedsWater();
     }
+}
+
+int Garden::ifTreesNeedWater()
+{   _howManyPlantNeedsWater = 0;
+    for (int i = 0; i < _trees.size(); i++) {
+        if (_trees[i].ifNeedsWater()) {
+            _howManyPlantNeedsWater++;
+        }
+    }
+    for (int j = 0; j < _flowers.size(); j++) {
+        if (_flowers[j].ifNeedsWater()) {
+            _howManyPlantNeedsWater++;
+        }
+    }
+    return _howManyPlantNeedsWater;
 }
