@@ -14,17 +14,12 @@ std::string Mentor::getLevel()
 
 Mentor::Mentor()
 {
-    _name = "Jane Doe";
-    _age = 30;
-    _gender = Gender::FEMALE;
     _level = Level::INTERMEDIATE;
 }
 
-Mentor::Mentor(std::string name, int age, Gender gender, Level level)
+Mentor::Mentor(std::string name, int age, Gender gender, Level level) :
+    Person(name, age, gender)
 {
-    _name = name;
-    _age = age;
-    _gender = gender;
     _level = level;
 }
 

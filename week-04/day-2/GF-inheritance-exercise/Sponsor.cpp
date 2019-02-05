@@ -10,11 +10,9 @@ Sponsor::Sponsor()
     _hiredStudents = 0;
 }
 
-Sponsor::Sponsor(std::string name, int age, Gender gender, std::string company)
+Sponsor::Sponsor(std::string name, int age, Gender gender, std::string company) :
+    Person(name, age, gender)
 {
-    _name = name;
-    _age = age;
-    _gender = gender;
     _company = company;
     _hiredStudents = 0;
 }
