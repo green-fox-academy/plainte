@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Bird.h"
 
 Bird::Bird()
@@ -18,4 +19,19 @@ std::string Bird::getName()
 std::string Bird::breed()
 {
     return "laying eggs.";
+}
+
+void Bird::land()
+{
+    std::cout << "The " << _name << " is landing!" << std::endl;
+}
+
+void Bird::fly()
+{
+    std::cout << "The " << _name << " is flying!" << std::endl;
+}
+
+void Bird::takeOff()
+{
+    std::cout << "The " << _name << " takes off!" << std::endl;
 }

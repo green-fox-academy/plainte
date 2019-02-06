@@ -13,4 +13,10 @@ int main( int argc, char* args[] )
     std::cout << "A " << reptile.getName() << " is breeding by " << reptile.breed() << std::endl;
     std::cout << "A " << mammal.getName() << " is breeding by " << mammal.breed() << std::endl;
     std::cout << "A " << bird.getName() << " is breeding by " << bird.breed() << std::endl;
+
+    bird.takeOff();
+    bird.fly();
+    bird.land();
+
+    return 0;
 }
