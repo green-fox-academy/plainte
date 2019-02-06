@@ -1,0 +1,11 @@
+#ifndef AIRCRAFT_CARRIER_CARRIER_H
+#define AIRCRAFT_CARRIER_CARRIER_H
+
+
+class Carrier
+{
+
+};
+
+
+#endif //AIRCRAFT_CARRIER_CARRIER_H
