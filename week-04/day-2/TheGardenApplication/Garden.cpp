@@ -41,7 +41,8 @@ void Garden::checkIfPlantsNeedWater()
 }
 
 int Garden::ifTreesNeedWater()
-{   _howManyPlantNeedsWater = 0;
+{
+    _howManyPlantNeedsWater = 0;
     for (int i = 0; i < _trees.size(); i++) {
         if (_trees[i].ifNeedsWater()) {
             _howManyPlantNeedsWater++;
