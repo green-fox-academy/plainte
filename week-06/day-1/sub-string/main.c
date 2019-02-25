@@ -28,18 +28,19 @@ int substring(char *string1, char *string2)
 
     if (length1 == length2) {
         return -1;
-    }
-    if (length1 < length2) {
-        if (strstr(string2,string1) != NULL) {
-            return 1;
-        } else {
-            return 0;
-        }
     } else {
-        if (strstr(string1, string2) != NULL) {
-            return 1;
+        if (length1 < length2) {
+            if (strstr(string2, string1) != NULL) {
+                return 1;
+            } else {
+                return 0;
+            }
         } else {
-            return 0;
+            if (strstr(string1, string2) != NULL) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
     }
 }
