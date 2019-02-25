@@ -39,5 +39,7 @@ int main()
         }
     }
 
+    std::vector<int> myVector = {0, 5, 3};
+
     return 0;
 }

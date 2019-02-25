@@ -58,6 +58,7 @@ int main()
     carrier.fill();
     carrier2.fill();
     carrier2.fight(carrier);
+    std::cout << carrier.getCarrierAmmo() << std::endl;
     std::cout << carrier.getStatus() << std::endl;
     carrier2.fill();
     carrier2.fight(carrier);
