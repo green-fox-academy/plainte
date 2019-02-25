@@ -25,7 +25,7 @@ int main()
 
 int compareStrings(char *str1, char *str2)
 {
-    if (strcmp(str1, str2) == 0) {
+    if (stricmp(str1, str2) == 0) {
         return 1;
     }
     return 0;
