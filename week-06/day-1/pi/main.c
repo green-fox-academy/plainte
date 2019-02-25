@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "circle.h"
 
-#define PI 3.14
-
-double calculatingArea(double radius);
 
 int main()
 {
@@ -15,12 +13,8 @@ int main()
     printf("Please give the radius of your circle!\n");
     scanf("%lf", &r);
 
-    printf("area = %.2lf", calculatingArea(r));
+    printf("area = %.2lf\n", calculatingArea(r));
+    printf("circumference = %.2lf\n", calculatingCircumference(r));
 
     return 0;
-}
-
-double calculatingArea(double radius)
-{
-    return radius * radius * PI;
 }
