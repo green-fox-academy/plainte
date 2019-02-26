@@ -3,4 +3,4 @@ project(sandwich)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(sandwich main.cpp)
+add_executable(sandwich main.c)
