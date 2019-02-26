@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /* Create a smartphone register application
  * Read the content of smartphones.txt and store the informations in a structure called "smartphone:
@@ -55,6 +56,7 @@ typedef struct smartphone
     char name[254];
     int year;
     enum screen_size_type size_type;
+    int price;
 } smartphone_t;
 
 void read_file_into_structure(const char *path, smartphone_t *smartphone, int s_length);
@@ -64,6 +66,10 @@ int count_lines_in_file(const char *path);
 char *get_oldest_phone(smartphone_t *smartphone, int s_length);
 
 int get_screen_size_count(smartphone_t *smartphone, int s_length, enum screen_size_type scrs);
+
+int create_file(smartphone_t *smartphone, int s_length);
+
+void calculate_phone_price(smartphone_t *smartphone, int s_length);
 
 int main()
 {
@@ -80,6 +86,8 @@ int main()
     printf("The oldest phone in the file is: %s\n", get_oldest_phone(smartphones, smartphones_length));
     // test get_screen_size_count function
     printf("The given size was found: %d times\n", get_screen_size_count(smartphones,smartphones_length, BIG));
+    // create file with name and price list
+    create_file(smartphones, smartphones_length);
     return 0;
 }
 
@@ -108,6 +116,7 @@ void read_file_into_structure(const char *path, smartphone_t *smartphone, int s_
             }
         }
     }
+    fclose(fptr);
 }
 
 int count_lines_in_file(const char *path)
@@ -149,4 +158,38 @@ int get_screen_size_count(smartphone_t *smartphone, int s_length, enum screen_si
         }
     }
     return count;
+}
+
+int create_file(smartphone_t *smartphone, int s_length)
+{
+    FILE *fptr = fopen("../prices.txt", "w");
+
+    calculate_phone_price(smartphone, s_length);
+    for (int i = 0; i < s_length; i++) {
+        fprintf(fptr,"%s %dEUR\n", smartphone[i].name, smartphone[i].price);
+    }
+    fclose(fptr);
+    return 0;
+}
+
+void calculate_phone_price(smartphone_t *smartphone, int s_length)
+{
+    int base_price = 300;
+    for (int i = 0; i < s_length; i++) {
+        if (smartphone[i].size_type == SMALL) {
+            smartphone[i].price = base_price;
+        } else if (smartphone[i].size_type == MEDIUM) {
+            smartphone[i].price = base_price + 100;
+        } else if (smartphone[i].size_type == BIG) {
+            smartphone[i].price = base_price * 2;
+        }
+    }
+    int current_year = 2019;
+    for (int i = 0; i < s_length; i++) {
+        if ((current_year - smartphone[i].year) > 4) {
+            smartphone[i].price -= 250;
+        } else {
+            smartphone[i].price -= (current_year - smartphone[i].year) * 50;
+        }
+    }
 }

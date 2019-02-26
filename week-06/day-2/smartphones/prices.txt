@@ -1,0 +1,15 @@
+Huawei_P10 300EUR
+Iphone_8 300EUR
+Samsung_Galaxy_Ace 50EUR
+Samsung_Galaxy_Note_9 550EUR
+Motorola_Moto_Z4 300EUR
+Xiaomi_Mi_8 550EUR
+OnePlus_One 150EUR
+Nokia_Lumia_630 50EUR
+Asus_Zenfone_5 550EUR
+Sony_Xperia_T 50EUR
+Acer_Liquid_Z4 50EUR
+HTC_Desire_830 250EUR
+Verykool_T7445 500EUR
+Google_Pixel 250EUR
+LG_K3 250EUR
