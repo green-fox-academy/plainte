@@ -18,6 +18,7 @@ typedef struct
 {
     char *name;
     int students;
+    float biggest_difference_between_exams;
 } classes_t;
 
 int ask_for_number_of_classes();
@@ -29,6 +30,10 @@ void name_of_classes(classes_t *cls, int num_of_classes);
 void store_exam_result(classes_t *cls, int num_of_classes, float **exam_res);
 
 char *which_class_has_the_biggest_difference(classes_t *cls, int num_of_classes, float **exam_res);
+
+void which_class_has_the_best_exam(classes_t *cls, int num_of_classes, float **exam_res);
+
+float average_of_all_exams(classes_t *cls, int num_of_classes, float **exam_res);
 
 int main()
 {
@@ -49,7 +54,20 @@ int main()
     }
     // storing exam results
     store_exam_result(classes, number_of_classes, exam_results);
-
+    // getting biggest difference, printing the class name and the difference
+    printf("The %s class has the biggest difference: ", which_class_has_the_biggest_difference(classes, number_of_classes, exam_results));
+    for (int j = 0; j < number_of_classes; j++) {
+        if (which_class_has_the_biggest_difference(classes, number_of_classes, exam_results) == classes[j].name) {
+            printf("%.2f\n", classes[j].biggest_difference_between_exams);
+        }
+    }
+    // class with best exam
+    which_class_has_the_best_exam(classes, number_of_classes, exam_results);
+    // the average of all the exams
+    printf("The average of all the exams: %.2f", average_of_all_exams(classes, number_of_classes, exam_results));
+    // deallocate memory
+    free(classes);
+    free(exam_results);
     return 0;
 }
 
@@ -94,19 +112,72 @@ void store_exam_result(classes_t *cls, int num_of_classes, float **exam_res)
 
 char *which_class_has_the_biggest_difference(classes_t *cls, int num_of_classes, float **exam_res)
 {
-    char *name_of_class;
-    float min_exam = 0;
+    char *name_of_class = NULL;
+    float *difference;
+    difference = (float *) malloc(num_of_classes * sizeof(float));
     for (int i = 0; i < num_of_classes; i++) {
         float max_exam = 0;
-        float min_exam;
-        float biggest_difference = 0;
+        float min_exam = exam_res[i][0];
         for (int j = 0; j < cls[i].students; j++) {
             if (max_exam < exam_res[i][j]) {
                 max_exam = exam_res[i][j];
             }
         }
         for (int k = 0; k < cls[i].students; k++) {
-            if(min_exam >)
+            if(min_exam > exam_res[i][k]) {
+                min_exam = exam_res[i][k];
+            }
+        }
+        float biggest_difference = (max_exam - min_exam);
+        difference[i] = biggest_difference;
+        cls[i].biggest_difference_between_exams = biggest_difference;
+
+    }
+    float max_difference = 0;
+    for (int l = 0; l < num_of_classes; l++) {
+        if (max_difference < difference[l]) {
+            max_difference = difference[l];
+            name_of_class = cls[l].name;
         }
     }
+    return name_of_class;
+}
+
+void which_class_has_the_best_exam(classes_t *cls, int num_of_classes, float **exam_res)
+{
+    float *best_exam;
+    best_exam = (float *) malloc(num_of_classes * sizeof(float));
+    for (int i = 0; i < num_of_classes; i++) {
+        float max_exam = 0;
+        for (int j = 0; j < cls[i].students; j++) {
+            if (max_exam < exam_res[i][j]) {
+                max_exam = exam_res[i][j];
+            }
+        }
+        best_exam[i] = max_exam;
+    }
+    float best = 0;
+    for (int j = 0; j < num_of_classes; j++) {
+        if (best < best_exam[j]) {
+            best = best_exam[j];
+        }
+    }
+    for (int k = 0; k < num_of_classes; k++) {
+        if (best == best_exam[k]) {
+            printf("The %s class has the best exam: %.2f\n", cls[k].name, best);
+        }
+    }
+}
+
+float average_of_all_exams(classes_t *cls, int num_of_classes, float **exam_res)
+{
+    float sum = 0;
+    int count = 0;
+    for (int i = 0; i < num_of_classes; i++) {
+        for (int j = 0; j < cls[i].students; j++) {
+            sum += exam_res[i][j];
+            count++;
+        }
+    }
+    return sum / count;
 }
