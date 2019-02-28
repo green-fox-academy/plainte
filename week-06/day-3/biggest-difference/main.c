@@ -140,6 +140,7 @@ char *which_class_has_the_biggest_difference(classes_t *cls, int num_of_classes,
             name_of_class = cls[l].name;
         }
     }
+    free(difference);
     return name_of_class;
 }
 
@@ -167,6 +168,7 @@ void which_class_has_the_best_exam(classes_t *cls, int num_of_classes, float **e
             printf("The %s class has the best exam: %.2f\n", cls[k].name, best);
         }
     }
+    free(best_exam);
 }
 
 float average_of_all_exams(classes_t *cls, int num_of_classes, float **exam_res)
