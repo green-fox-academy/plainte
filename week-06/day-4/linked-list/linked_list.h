@@ -32,6 +32,6 @@ int linked_list_delete_by_value(linked_list_node_t **linked_list, int value);
 // searches for the first occurence of the given value and returns the memory address
 linked_list_node_t *linked_list_search(linked_list_node_t *linked_list, int value);
 
-void bubble_sort(linked_list_node_t *linked_list);
+linked_list_node_t *linked_list_bubble_sort(linked_list_node_t *linked_list);
 
 #endif //LINKED_LIST_LINKED_LIST_H

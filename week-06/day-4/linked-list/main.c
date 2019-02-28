@@ -41,15 +41,10 @@ int main()
     linked_list_print(linked_list);
     printf("The list is empty: %d\n", linked_list_empty(linked_list));
     printf("The memory address of the given value is: %p\n", linked_list_search(linked_list, 5));
+    linked_list = linked_list_bubble_sort(linked_list);
+    linked_list_print(linked_list);
 
 
-    /*linked_list_node_t *linked_list2 = linked_list_create(5);
-    linked_list_push_back(linked_list2, 10);
-    linked_list_push_back(linked_list2, 5);
-    linked_list_push_back(linked_list2, 10);
-    linked_list_push_back(linked_list2, 10);
-    linked_list_print(linked_list2);*/
-   // printf("The memory address is: %p\n", linked_list_search(linked_list2, 10));
 
     linked_list_dealloc(linked_list);
     return 0;
