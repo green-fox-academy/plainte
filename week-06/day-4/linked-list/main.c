@@ -37,7 +37,9 @@ int main()
     linked_list_push_back(linked_list, 5);
     linked_list_push_back(linked_list, 20);
     linked_list_push_back(linked_list, 15);
-    linked_list_push_back(linked_list, 5);
+    linked_list_push_back(linked_list, 9);
+    linked_list_push_back(linked_list, 6);
+    linked_list_push_back(linked_list, 7);
     linked_list_print(linked_list);
     printf("The list is empty: %d\n", linked_list_empty(linked_list));
     printf("The memory address of the given value is: %p\n", linked_list_search(linked_list, 5));
