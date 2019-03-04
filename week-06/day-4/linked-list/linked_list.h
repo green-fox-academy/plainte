@@ -29,9 +29,9 @@ int linked_list_empty(linked_list_node_t *linked_list);
 linked_list_node_t *linked_list_delete_first(linked_list_node_t *linked_list);
 // deletes every node with the same value as given value
 int linked_list_delete_by_value(linked_list_node_t **linked_list, int value);
-// searches for the first occurence of the given value and returns the memory address
+// searches for the first occurrence of the given value and returns the memory address
 linked_list_node_t *linked_list_search(linked_list_node_t *linked_list, int value);
-
+// sorting the linked_list
 linked_list_node_t *linked_list_bubble_sort(linked_list_node_t *linked_list);
 
 #endif //LINKED_LIST_LINKED_LIST_H
