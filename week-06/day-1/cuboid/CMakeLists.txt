@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
-project(cuboid C)
-set(CMAKE_C_STANDARD 99)
+project(cuboid)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 # Change this to the name of the directory that contains your code
 set(PROJECT_LIB_NAME cuboid_lib)
