@@ -1,160 +1,143 @@
 #include "stm32f7xx.h"
 #include "stm32746g_discovery.h"
-#include <string.h>
+#include "string.h"
 
-GPIO_InitTypeDef volume_buttons;
-GPIO_InitTypeDef channel_buttons;
+TIM_HandleTypeDef TimHandle;
+UART_HandleTypeDef uart_handle;
 
-UART_HandleTypeDef UartHandle;
+char buffer[6];
+volatile uint16_t tim_val = 0;
 
 static void Error_Handler(void);
 static void SystemClock_Config(void);
 
-volatile uint32_t rising_edge = 0;
-const uint32_t debounce_delay = 1000;    // the debounce time in ms (increase if the output flickers)
+void init_uart()
+{
+	__HAL_RCC_USART1_CLK_ENABLE();
 
-volatile int volume = 0;
-volatile double max_frequency = 108.00; // frequencies in MHz
-volatile double min_frequency = 87.5;
-volatile double preset_radio[5] = { 88.1, 89.5, 90.9, 92.1, 92.9 };
+	/* defining the UART configuration structure */
+	uart_handle.Instance = USART1;
+	uart_handle.Init.BaudRate = 115200;
+	uart_handle.Init.WordLength = UART_WORDLENGTH_8B;
+	uart_handle.Init.StopBits = UART_STOPBITS_1;
+	uart_handle.Init.Parity = UART_PARITY_NONE;
+	uart_handle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	uart_handle.Init.Mode = UART_MODE_TX_RX;
+
+	BSP_COM_Init(COM1, &uart_handle);
+
+	HAL_NVIC_SetPriority(USART1_IRQn, 2, 0);
+	HAL_NVIC_EnableIRQ(USART1_IRQn);
+}
 
 int main(void)
 {
-	HAL_Init();
-	SystemClock_Config();
+    HAL_Init();
+    SystemClock_Config();
+    BSP_LED_Init(LED_GREEN);
+    __HAL_RCC_TIM2_CLK_ENABLE();
+    __HAL_TIM_SET_COUNTER(&TimHandle, 0);
+    init_uart();
 
-	/* volume buttons A1, A2 */
-	__HAL_RCC_GPIOF_CLK_ENABLE();
+    TimHandle.Instance = TIM2;
+    TimHandle.Init.Prescaler		= 10800 - 1;	/* 108000000/10800=1000000 -> speed of 1 count-up: 1/10000 s = 0.1 ms */
+    TimHandle.Init.Period		= 10000 - 1;	/* 10000 x 0.1 ms  = 1 s period */
+    TimHandle.Init.ClockDivision	= TIM_CLOCKDIVISION_DIV1;
+    TimHandle.Init.CounterMode		= TIM_COUNTERMODE_UP;
 
-	volume_buttons.Pin = GPIO_PIN_10 | GPIO_PIN_9;
-	volume_buttons.Mode = GPIO_MODE_IT_RISING; /* configure as output, in push-pull mode */
-	volume_buttons.Pull = GPIO_NOPULL;
-	volume_buttons.Speed = GPIO_SPEED_LOW;
+    /* configure the timer */
+    HAL_TIM_Base_Init(&TimHandle);
 
-	HAL_GPIO_Init(GPIOF, &volume_buttons);
+    /* starting the timer */
+    HAL_TIM_Base_Start_IT(&TimHandle);
 
-	channel_buttons.Pin = GPIO_PIN_8 | GPIO_PIN_7;
-	channel_buttons.Mode = GPIO_MODE_IT_RISING;
-	channel_buttons.Pull = GPIO_NOPULL;
-	channel_buttons.Speed = GPIO_SPEED_LOW;
+    HAL_NVIC_SetPriority(TIM2_IRQn, 3, 0);
+    HAL_NVIC_EnableIRQ(TIM2_IRQn);
 
-	HAL_GPIO_Init(GPIOF, &channel_buttons);
+    memset(buffer, '\0', 6);
+	HAL_UART_Receive_IT(&uart_handle,(uint8_t *) &buffer, 6);
 
-	BSP_LED_Init(LED_GREEN);
+    while (1) {
+    }
+}
 
-	HAL_NVIC_SetPriority(EXTI9_5_IRQn, 4, 0);
-	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 4, 0);
+void TIM2_IRQHandler(void)
+{
+	HAL_TIM_IRQHandler(&TimHandle);
+}
 
-	HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
-
-	  __HAL_RCC_USART1_CLK_ENABLE();
-
-	/* defining the UART configuration structure */
-	UartHandle.Instance = USART1;
-	UartHandle.Init.BaudRate = 115200;
-	UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
-	UartHandle.Init.StopBits = UART_STOPBITS_1;
-	UartHandle.Init.Parity = UART_PARITY_NONE;
-	UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-	UartHandle.Init.Mode = UART_MODE_TX_RX;
-
-	BSP_COM_Init(COM1, &UartHandle);
-
-	char buffer[3];
-
-	while (1) {
-
-		HAL_Delay(1000);
-		sprintf(buffer, "%d", volume);
-
-		HAL_UART_Transmit(&UartHandle, (uint8_t*) buffer, strlen(buffer), 0xFFFF);
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim->Instance == TIM2) {
+		tim_val = __HAL_TIM_GET_COUNTER(htim);
+		if(tim_val == 0){
+			BSP_LED_Toggle(LED_GREEN);
+		}
 
 	}
 }
 
 static void Error_Handler(void)
-{
-}
+{}
 
 static void SystemClock_Config(void)
 {
-	RCC_OscInitTypeDef RCC_OscInitStruct =
-	{ 0 };
-	RCC_ClkInitTypeDef RCC_ClkInitStruct =
-	{ 0 };
+    RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+    RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-	/**Configure the main internal regulator output voltage */
-	__HAL_RCC_PWR_CLK_ENABLE()
-	;
-	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+    /**Configure the main internal regulator output voltage */
+    __HAL_RCC_PWR_CLK_ENABLE();
+    __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-	/**Initializes the CPU, AHB and APB busses clocks */
-	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-	RCC_OscInitStruct.PLL.PLLM = 8;
-	RCC_OscInitStruct.PLL.PLLN = 216;
-	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-	RCC_OscInitStruct.PLL.PLLQ = 2;
+    /**Initializes the CPU, AHB and APB busses clocks */
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+    RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+    RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+    RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+    RCC_OscInitStruct.PLL.PLLM = 8;
+    RCC_OscInitStruct.PLL.PLLN = 216;
+    RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+    RCC_OscInitStruct.PLL.PLLQ = 2;
 
-	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
-		Error_Handler();
-	}
+    if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
+        Error_Handler();
+    }
 
-	/**Activate the Over-Drive mode */
-	if (HAL_PWREx_EnableOverDrive() != HAL_OK) {
-		Error_Handler();
-	}
+    /**Activate the Over-Drive mode */
+    if (HAL_PWREx_EnableOverDrive() != HAL_OK) {
+        Error_Handler();
+    }
 
-	/**Initializes the CPU, AHB and APB busses clocks */
-	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
-			| RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
-	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+    /**Initializes the CPU, AHB and APB busses clocks */
+    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+    RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+    RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+    RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-	if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_7) != HAL_OK) {
-		Error_Handler();
-	}
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_7) != HAL_OK) {
+        Error_Handler();
+    }
 }
 
-void EXTI9_5_IRQHandler(void)
+void USART1_IRQHandler()
 {
-	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
-	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_8);
-	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
+	HAL_UART_IRQHandler(&uart_handle);
 }
 
-void EXTI15_10_IRQHandler(void)
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_10);
-}
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	// volume up pin10 button
-	uint32_t start = HAL_GetTick();
-	if (GPIO_Pin == GPIO_PIN_10) {
-		while (rising_edge == 0) {
-			if (HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_10) == 0) {
-				rising_edge = HAL_GetTick();
-			}
+	if (huart->Instance == USART1) {
+		if(strcmp(buffer, "flash")){
+			BSP_LED_Toggle(LED_GREEN);
+		} else if (strcmp(buffer, "on")){
+			BSP_LED_On(LED_GREEN);
+		} else if (strcmp(buffer, "off")){
+			BSP_LED_Off(LED_GREEN);
 		}
-		if (start - rising_edge < debounce_delay) {
-			if (volume + 1 <= 100) {
-				volume++;
-			}
-		} else {
-			if (volume + 5 <= 100) {
-				volume += 5;
-			} else {
-				volume = 100;
-			}
-		}
+		memset(buffer, '\0', 6);
+		HAL_UART_Receive_IT(&uart_handle,(uint8_t * ) &buffer, 6);
 	}
-	rising_edge = 0;
 }
