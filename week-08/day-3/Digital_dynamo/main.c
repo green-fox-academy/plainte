@@ -1,80 +1,98 @@
 #include "stm32f7xx.h"
 #include "stm32746g_discovery.h"
-#include "string.h"
-
+			
+/* the timer's config structure */
 TIM_HandleTypeDef TimHandle;
-UART_HandleTypeDef uart_handle;
 
-char buffer[6];
-volatile uint16_t tim_val = 0;
+/* the output compare channel's config structure */
+TIM_OC_InitTypeDef sConfig;
+
+GPIO_InitTypeDef PA15_LED_config;
+GPIO_InitTypeDef button;
 
 static void Error_Handler(void);
 static void SystemClock_Config(void);
 
-void init_uart()
-{
-	__HAL_RCC_USART1_CLK_ENABLE();
-
-	/* defining the UART configuration structure */
-	uart_handle.Instance = USART1;
-	uart_handle.Init.BaudRate = 115200;
-	uart_handle.Init.WordLength = UART_WORDLENGTH_8B;
-	uart_handle.Init.StopBits = UART_STOPBITS_1;
-	uart_handle.Init.Parity = UART_PARITY_NONE;
-	uart_handle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-	uart_handle.Init.Mode = UART_MODE_TX_RX;
-
-	BSP_COM_Init(COM1, &uart_handle);
-
-	HAL_NVIC_SetPriority(USART1_IRQn, 2, 0);
-	HAL_NVIC_EnableIRQ(USART1_IRQn);
-}
+void timer_init();
+void led_init();
+void button_init();
+volatile int speed = 0;
 
 int main(void)
 {
-    HAL_Init();
-    SystemClock_Config();
-    BSP_LED_Init(LED_GREEN);
+	HAL_Init();
+	SystemClock_Config();
+
+	timer_init();
+	led_init();
+	button_init();
+
+	HAL_NVIC_SetPriority(EXTI4_IRQn, 4, 0);
+
+	HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
+	while (1) {
+		while (speed >= 0) {
+			__HAL_TIM_SET_COMPARE(&TimHandle, TIM_CHANNEL_1, speed);
+			if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10) == GPIO_PIN_RESET) {
+				for (int i = 0; i < 48826290; i+=5); /* 48826291 execution of this loop takes exactly 3000 ms */
+				if (speed - 5 >= 0) {
+					speed -= 3;
+				} else {
+					speed = 0;
+				}
+			}
+		}
+	}
+}
+
+void timer_init()
+{
+    /* we need to enable the TIM2 */
     __HAL_RCC_TIM2_CLK_ENABLE();
-    __HAL_TIM_SET_COUNTER(&TimHandle, 0);
-    init_uart();
 
     TimHandle.Instance = TIM2;
-    TimHandle.Init.Prescaler		= 10800 - 1;	/* 108000000/10800=1000000 -> speed of 1 count-up: 1/10000 s = 0.1 ms */
-    TimHandle.Init.Period		= 10000 - 1;	/* 10000 x 0.1 ms  = 1 s period */
-    TimHandle.Init.ClockDivision	= TIM_CLOCKDIVISION_DIV1;
-    TimHandle.Init.CounterMode		= TIM_COUNTERMODE_UP;
+	TimHandle.Init.Prescaler = 108 - 1; /* 108000000/10800=10000 -> speed of 1 count-up: 1/10000 sec = 0.1 ms */
+	TimHandle.Init.Period = 100 - 1; /* 10000 x 0.1 ms = 1 second period */
+	TimHandle.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+	TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
 
-    /* configure the timer */
-    HAL_TIM_Base_Init(&TimHandle);
+	/* configuring the timer in PWM mode instead of calling HAL_TIM_Base_Init(&TimHandle) */
+	HAL_TIM_PWM_Init(&TimHandle);
 
-    /* starting the timer */
-    HAL_TIM_Base_Start_IT(&TimHandle);
+	/* output compare config ***********************************************************************************************/
+	sConfig.Pulse = 0;
+	sConfig.OCMode = TIM_OCMODE_PWM1;
+	sConfig.OCPolarity = TIM_OCPOLARITY_HIGH;
+	sConfig.OCFastMode = TIM_OCFAST_ENABLE;
 
-    HAL_NVIC_SetPriority(TIM2_IRQn, 3, 0);
-    HAL_NVIC_EnableIRQ(TIM2_IRQn);
+	HAL_TIM_PWM_ConfigChannel(&TimHandle, &sConfig, TIM_CHANNEL_1);
 
-    memset(buffer, '\0', 6);
-	HAL_UART_Receive_IT(&uart_handle,(uint8_t *) &buffer, 6);
-
-    while (1) {
-    }
+	/* starting PWM */
+	HAL_TIM_PWM_Start_IT(&TimHandle, TIM_CHANNEL_1);
 }
 
-void TIM2_IRQHandler(void)
+void led_init()
 {
-	HAL_TIM_IRQHandler(&TimHandle);
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+
+	PA15_LED_config.Pin = GPIO_PIN_15;
+	PA15_LED_config.Mode = GPIO_MODE_AF_PP; /* configure as output, in push-pull mode */
+	PA15_LED_config.Pull = GPIO_NOPULL;
+	PA15_LED_config.Speed = GPIO_SPEED_HIGH;
+	PA15_LED_config.Alternate = GPIO_AF1_TIM2; /* this alternate function we need to use TIM2 in output compare mode */
+	HAL_GPIO_Init(GPIOA, &PA15_LED_config);
 }
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+void button_init()
 {
-	if (htim->Instance == TIM2) {
-		tim_val = __HAL_TIM_GET_COUNTER(htim);
-		if(tim_val == 0){
-			BSP_LED_Toggle(LED_GREEN);
-		}
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	button.Pin = GPIO_PIN_4;
+	button.Mode = GPIO_MODE_IT_RISING;
+	button.Pull = GPIO_NOPULL;
+	button.Speed = GPIO_SPEED_HIGH;
 
-	}
+	HAL_GPIO_Init(GPIOB, &button);
 }
 
 static void Error_Handler(void)
@@ -121,23 +139,20 @@ static void SystemClock_Config(void)
     }
 }
 
-void USART1_IRQHandler()
+void EXTI4_IRQHandler(void)
 {
-	HAL_UART_IRQHandler(&uart_handle);
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
 }
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-
-	if (huart->Instance == USART1) {
-		if(strcmp(buffer, "flash")){
-			BSP_LED_Toggle(LED_GREEN);
-		} else if (strcmp(buffer, "on")){
-			BSP_LED_On(LED_GREEN);
-		} else if (strcmp(buffer, "off")){
-			BSP_LED_Off(LED_GREEN);
+	if (GPIO_Pin == GPIO_PIN_4) {
+		if (speed < 100) {
+			if (speed + 2 <= 100) {
+				speed += 5;
+			} else {
+				speed = 100;
+			}
 		}
-		memset(buffer, '\0', 6);
-		HAL_UART_Receive_IT(&uart_handle,(uint8_t * ) &buffer, 6);
 	}
 }
